@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/llCategory"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools">
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvAddProduct"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8.0dp"
+    android:layout_marginTop="4.0dp"
+    android:layout_marginRight="8.0dp"
+    android:layout_marginBottom="4.0dp"
+    card_view:cardCornerRadius="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/ivProductImage"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:layout_height="200.0dp" />
+
+        <LinearLayout
+            android:id="@+id/layout_item_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.8"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/holo_red_light"
+                    android:text="Note : The image is for reference purpose only. The actual product may vary in shape or appearance based on climate, age, height, etc."
+                    android:textSize="16dp"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/tvProductName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Item Name "
+                    android:textSize="16dp"
+                    android:layout_marginBottom="10dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvProductDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:text="Item descriptions"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tvProductPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:text="Rs. 8,999"
+                    android:textColor="#4CAF50"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tvProductSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tvProductSold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1345 sold in 30 days"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:textSize="14dp" />
+
+
+               
+            </LinearLayout>
+        </LinearLayout>
+
+            <!--<ImageView-->
+            <!--android:id="@+id/ic_wishlist"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:layout_weight="0.3"-->
+            <!--android:src="@drawable/ic_favorite_border_black_18dp" />-->
+        </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/btnAddToCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:text="@string/add_to_cart" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/mProgressView"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>
